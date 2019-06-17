@@ -37,12 +37,30 @@ const siteContent = {
   },
 };
 
+// Images //
+
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
+const cta = document.getElementById("cta-img");
+const middle = document.getElementById("middle-img");
+
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-
-let cta = document.getElementById("cta-img");
 cta.setAttribute('src', siteContent["cta"]["img-src"])
-
-let middle = document.getElementById("middle-img");
 middle.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// Navigation bar //
+const navData = document.getElementsByTagName('nav');
+
+
+// CTA //
+const hOne = document.querySelector('.cta h1');
+const button = document.querySelector('.cta button');
+
+hOne.textContent = "DOM Is Awesome";
+button.textContent = "Get Started"
+button.style.fontFamily = 
+// Main Content //
+
+// Contact //
+
+// Footer //
