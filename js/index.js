@@ -49,8 +49,13 @@ cta.setAttribute('src', siteContent["cta"]["img-src"])
 middle.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 // Navigation bar //
-const navData = document.getElementsByTagName('nav');
-
+const navData = document.getElementsByTagName('a');
+navData[0].innerHTML = siteContent["nav"]["nav-item-1"]
+navData[1].innerHTML = siteContent["nav"]["nav-item-2"]
+navData[2].innerHTML = siteContent["nav"]["nav-item-3"]
+navData[3].innerHTML = siteContent["nav"]["nav-item-4"]
+navData[4].innerHTML = siteContent["nav"]["nav-item-5"]
+navData[5].innerHTML = siteContent["nav"]["nav-item-6"]
 
 // CTA //
 const hOne = document.querySelector('.cta h1');
@@ -58,7 +63,6 @@ const button = document.querySelector('.cta button');
 
 hOne.textContent = "DOM Is Awesome";
 button.textContent = "Get Started"
-button.style.fontFamily = 
 // Main Content //
 
 // Contact //
