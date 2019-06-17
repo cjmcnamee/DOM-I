@@ -50,6 +50,7 @@ middle.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 // Navigation bar //
 const navData = document.getElementsByTagName('a');
+
 navData[0].innerHTML = siteContent["nav"]["nav-item-1"]
 navData[1].innerHTML = siteContent["nav"]["nav-item-2"]
 navData[2].innerHTML = siteContent["nav"]["nav-item-3"]
@@ -61,10 +62,35 @@ navData[5].innerHTML = siteContent["nav"]["nav-item-6"]
 const hOne = document.querySelector('.cta h1');
 const button = document.querySelector('.cta button');
 
-hOne.textContent = "DOM Is Awesome";
-button.textContent = "Get Started"
+hOne.innerHTML = siteContent["cta"]["h1"]
+button.innerHTML = siteContent["cta"]["button"]
+
 // Main Content //
+const mainH4 = document.querySelectorAll('.main-content h4');
+const mainContent = document.querySelectorAll('.main-content p')
+
+mainH4[0].innerHTML = siteContent["main-content"]["features-h4"]
+mainH4[1].innerHTML = siteContent["main-content"]["about-h4"]
+mainH4[2].innerHTML = siteContent["main-content"]["services-h4"]
+mainH4[3].innerHTML = siteContent["main-content"]["product-h4"]
+mainH4[4].innerHTML = siteContent["main-content"]["vision-h4"]
+
+mainContent[0].innerHTML = siteContent["main-content"]["features-content"]
+mainContent[1].innerHTML = siteContent["main-content"]["about-content"]
+mainContent[2].innerHTML = siteContent["main-content"]["services-content"]
+mainContent[3].innerHTML = siteContent["main-content"]["product-content"]
+mainContent[4].innerHTML = siteContent["main-content"]["vision-content"]
 
 // Contact //
+const contactH4 = document.querySelector('.contact h4');
+const contactP = document.querySelectorAll('.contact p');
+
+contactH4.innerHTML = siteContent["contact"]["contact-h4"]
+contactP[0].innerHTML = siteContent["contact"]["address"]
+contactP[1].innerHTML = siteContent["contact"]["phone"]
+contactP[2].innerHTML = siteContent["contact"]["email"]
 
 // Footer //
+const footerP = document.querySelector('footer p');
+
+footerP.innerHTML = siteContent["footer"]["copyright"]
