@@ -49,8 +49,19 @@ cta.setAttribute('src', siteContent["cta"]["img-src"])
 middle.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 // Navigation bar //
-const navData = document.querySelectorAll('nav a');
 const aTag = document.getElementsByTagName('a');
+const navData = document.querySelectorAll('nav a');
+const addA = document.createElement('a');
+const addB = document.createElement('a');
+const addToNav = document.querySelector('nav')
+
+addA.href = '#';
+addA.textContent = 'Epic'
+addToNav.appendChild(addA);
+
+addB.href = '#';
+addB.textContent = 'Win'
+addToNav.appendChild(addB);
 
 for(let i = 0; i < aTag.length; i++){
   aTag[i].style.color = "green";
