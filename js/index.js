@@ -49,7 +49,12 @@ cta.setAttribute('src', siteContent["cta"]["img-src"])
 middle.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 // Navigation bar //
-const navData = document.getElementsByTagName('a');
+const navData = document.querySelectorAll('nav a');
+const aTag = document.getElementsByTagName('a');
+
+for(let i = 0; i < aTag.length; i++){
+  aTag[i].style.color = "green";
+}
 
 navData[0].innerHTML = siteContent["nav"]["nav-item-1"]
 navData[1].innerHTML = siteContent["nav"]["nav-item-2"]
