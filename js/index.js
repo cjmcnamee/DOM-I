@@ -37,6 +37,76 @@ const siteContent = {
   },
 };
 
+// Images //
+
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
+const cta = document.getElementById("cta-img");
+const middle = document.getElementById("middle-img");
+
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+cta.setAttribute('src', siteContent["cta"]["img-src"])
+middle.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// Navigation bar //
+const aTag = document.getElementsByTagName('a');
+const navData = document.querySelectorAll('nav a');
+const addA = document.createElement('a');
+const addB = document.createElement('a');
+const addToNav = document.querySelector('nav')
+
+addA.href = '#';
+addA.textContent = 'Epic'
+addToNav.appendChild(addA);
+
+addB.href = '#';
+addB.textContent = 'Win'
+addToNav.appendChild(addB);
+
+for(let i = 0; i < aTag.length; i++){
+  aTag[i].style.color = "green";
+}
+
+navData[0].innerHTML = siteContent["nav"]["nav-item-1"]
+navData[1].innerHTML = siteContent["nav"]["nav-item-2"]
+navData[2].innerHTML = siteContent["nav"]["nav-item-3"]
+navData[3].innerHTML = siteContent["nav"]["nav-item-4"]
+navData[4].innerHTML = siteContent["nav"]["nav-item-5"]
+navData[5].innerHTML = siteContent["nav"]["nav-item-6"]
+
+// CTA //
+const hOne = document.querySelector('.cta h1');
+const button = document.querySelector('.cta button');
+
+hOne.innerHTML = siteContent["cta"]["h1"]
+button.innerHTML = siteContent["cta"]["button"]
+
+// Main Content //
+const mainH4 = document.querySelectorAll('.main-content h4');
+const mainContent = document.querySelectorAll('.main-content p')
+
+mainH4[0].innerHTML = siteContent["main-content"]["features-h4"]
+mainH4[1].innerHTML = siteContent["main-content"]["about-h4"]
+mainH4[2].innerHTML = siteContent["main-content"]["services-h4"]
+mainH4[3].innerHTML = siteContent["main-content"]["product-h4"]
+mainH4[4].innerHTML = siteContent["main-content"]["vision-h4"]
+
+mainContent[0].innerHTML = siteContent["main-content"]["features-content"]
+mainContent[1].innerHTML = siteContent["main-content"]["about-content"]
+mainContent[2].innerHTML = siteContent["main-content"]["services-content"]
+mainContent[3].innerHTML = siteContent["main-content"]["product-content"]
+mainContent[4].innerHTML = siteContent["main-content"]["vision-content"]
+
+// Contact //
+const contactH4 = document.querySelector('.contact h4');
+const contactP = document.querySelectorAll('.contact p');
+
+contactH4.innerHTML = siteContent["contact"]["contact-h4"]
+contactP[0].innerHTML = siteContent["contact"]["address"]
+contactP[1].innerHTML = siteContent["contact"]["phone"]
+contactP[2].innerHTML = siteContent["contact"]["email"]
+
+// Footer //
+const footerP = document.querySelector('footer p');
+
+footerP.innerHTML = siteContent["footer"]["copyright"]
